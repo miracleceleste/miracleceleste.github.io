@@ -596,6 +596,8 @@ function displayPokemon(){
            //     }
             //else 
             //    row += " <span class=\"amount\">" + "\(x" + pokemon.amount + ")" + "</span>";
+            if (pokemon.amount) {
+                row += "<br><span class=\"amount\">" + pokemon.amount + "</span>";
             // Name
             row += "<td class=\"name\">" + (pokemon.dexNo == 29 || pokemon.dexNo == 32 ? "Nidoran" : pokemon.name);
             if (pokemon.gender == "F") {
@@ -606,8 +608,7 @@ function displayPokemon(){
             if (pokemon.form) {
                 row += "<br><span class=\"form\">" + pokemon.form + "</span>";
             }
-            if (pokemon.amount) {
-                row += "<br><span class=\"amount\">" + pokemon.amount + "</span>";
+
             row += "</td>";
             // Nature
             row += "<td class=\"nature " + pokemon.nature.toLowerCase() + "\">" + pokemon.nature + "</td>";
