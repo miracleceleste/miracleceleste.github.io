@@ -595,7 +595,7 @@ function displayPokemon(){
             if (typeof (pokemon.amount) === 'undefined'){
                 }
             else 
-                row += "\(x" + pokemon.amount + ")" + "</td>";
+                row += " <span class=\"amount\">" + "\(x" + pokemon.amount + ")" + "</span>";
             // Name
             row += "<td class=\"name\">" + (pokemon.dexNo == 29 || pokemon.dexNo == 32 ? "Nidoran" : pokemon.name);
             if (pokemon.gender == "F") {
