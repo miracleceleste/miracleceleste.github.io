@@ -516,6 +516,7 @@ function displayPokemon(){
             var pokemon = new Pokemon();
             pokemon.dexNo = Number(getValue(this.gsx$dexno));
             pokemon.name = getValue(this.gsx$name);
+            pokemon.amount = getValue(this.gsx$amount);
             pokemon.form = getValue(this.gsx$form);
             pokemon.nature = getValue(this.gsx$nature);
             pokemon.ability = getValue(this.gsx$ability);
@@ -590,6 +591,9 @@ function displayPokemon(){
             var row = "<tr class=\"" + getTags(pokemon) + "\"" + getData(pokemon) + ">";
             // Sprite
             row += "<td class=\"sprite\"><span class=\"menu-sprite " + getSpriteClass(pokemon) + "\" title=\"" + pokemon.name + "\">" + pokemon.dexNo + "</span></td>";
+            // Amount of pokemon in inventory
+            row += "<td class=\"amount\">" + pokemon.amount + "</td>";
+            //row += "<td class=\"egg-moves\">" + pokemon.eggMoves.join(', ') + "</td>";
             // Name
             row += "<td class=\"name\">" + (pokemon.dexNo == 29 || pokemon.dexNo == 32 ? "Nidoran" : pokemon.name);
             if (pokemon.gender == "F") {
