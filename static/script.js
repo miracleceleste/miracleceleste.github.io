@@ -488,6 +488,8 @@ $(document).ready(function() {
                     tabs["LF"] += tab + title.slice(3) + "</a>";
                 } else if (title.startsWith("NFT:")) {
                     tabs["NFT"] += tab + title.slice(4) + "</a>";
+                } else if (title.startsWith("!:")) {
+                    //ignore tabs that start with "!:" (and not inBlacklist)
                 } else if (!isInBlacklist(title)) {
                     tabs["?"] += tab + title + "</a>";
                 }
