@@ -592,7 +592,10 @@ function displayPokemon(){
             // Sprite
             row += "<td class=\"sprite\"><span class=\"menu-sprite " + getSpriteClass(pokemon) + "\" title=\"" + pokemon.name + "\">" + pokemon.dexNo + "</span></td>";
             // Amount of pokemon in inventory
-            row += "<td class=\"amount\">" + "\(x" + pokemon.amount + ")" + "</td>";
+            if (typeof (pokemon.amount) === 'undefined'){
+                }
+            else 
+                row += "\(x" + pokemon.amount + ")" + "</td>";
             // Name
             row += "<td class=\"name\">" + (pokemon.dexNo == 29 || pokemon.dexNo == 32 ? "Nidoran" : pokemon.name);
             if (pokemon.gender == "F") {
